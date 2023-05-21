@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/bot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 35px;
+}
+.navbar{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    width: 160px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links li a:hover{
+    color: #000;
+    transition: 0.5s;
+}
+
+#srch{
+    width: 200px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1rem;
+    outline: none;
+}
+.searchbar{
+    display: flex;
+    align-items: right;
+}
+#btn{
+    border: 1px solid #2e2c2c;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 10%;
+    background-color: #fff;
+}
+#btn:hover{
+    background-color: #a8a3a3;
+    transition: 0.5s;
+}
+.text{
+    width: 60%;
+    color: white;
+    position: absolute;
+    padding: 100px;
+}
+
+.text h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text p{
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text button {
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(245, 116, 70);
+    transition: 0.5s;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+
+.text button:hover {
+    color: black;
+    background-color: rgb(207, 67, 15);
+    transition: 1.3s;
+    cursor: pointer;
+}
+
+/*---- comics ----*/
+.loc{
+    margin: 1px;
+    padding-top: 1px;
+    background-color: whitesmoke;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    height: 30rem;
+}
+.loc h1{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    margin: 40px 0;
+    color: black;
+}
+
+.loc-img p {
+    color: black;
+    font-size: 25px;
+}
+.loc-img {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+.com{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px lightgray;
+    cursor: pointer;
+}
+.com img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.com::before{
+    content: "CLICK TO READ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -80px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.com::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0,.4);
+    transition: .3s;
+}
+.com:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+.com:hover::after{
+    height: 100%;
+}
+#loc-btn{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 50px;
+    border: 3px solid #2e2c2c;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#loc-btn:hover{
+    background-color: #f7cc8c;
+    transition: 0.5s;
+}
+
+/*---- games ----*/
+.games{
+    margin: 1px;
+    padding-top: 1px;
+    background-color: whitesmoke;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+}
+.games h1{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    margin: 40px 0;
+}
+.games-img p {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.games-img {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.gms{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px lightgray;
+    cursor: pointer;
+}
+.gms img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.gms::before{
+    content: "CLICK TO EXPLORE";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -80px;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.gms::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0,.4);
+    transition: .3s;
+}
+.gms:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+.gms:hover::after{
+    height: 100%;
+}
+#game-btn{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 50px;
+    border: 3px solid #2e2c2c;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#game-btn:hover{
+    background-color: #f7cc8c;
+    transition: 0.5s;
+}
+.footer-container{
+    width: 100%;
+    background-color: whitesmoke;
+    padding-top: 5px;
+}
+.footer-nav{
+    flex: 1;
+    text-align: center;
+}
+.footer-nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.footer-nav ul li a{
+    font-weight: bold;
+    color: #7e7878;
+    text-decoration: none;
+    font-size: 15px;
+}
+.footer-nav li a:hover{
+    color: #000;
+    transition: 0.5s;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    
+}
+.social-icon a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #FFFDE7;
+    margin: 10px;
+    border-radius: 20px;
+}
+.footer-img{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+}
+.footer-text{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    #title {
+        text-align: center;
+    }
+    .loc-img {
+        transform: rotate(0deg);
+        position: static;
+        
+    }
+}
